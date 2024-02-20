@@ -1,0 +1,20 @@
+.btn-6 button{
+    margin-left: 10vw;
+   margin-top: 5px;
+}
+.button{
+    border: 1px solid red;
+    margin-top: 4vh;
+}
+.last{
+    margin-top: 8vh;
+    text-align: center;
+    border: 1px solid rgb(227, 12, 12);
+}
+.oklast{
+    
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid rgb(227, 12, 12);
+
+}

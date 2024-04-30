@@ -7,3 +7,20 @@
     margin-top: 5vh;
     
 }
+.img-fluid{
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+}
+.img-fluid:hover{
+    transform: scale(1.1);
+}
+.name{
+    margin-top: 15px;
+    text-align: center;
+   
+}
+.middleimg img{
+    border-radius: 15px;
+}
+

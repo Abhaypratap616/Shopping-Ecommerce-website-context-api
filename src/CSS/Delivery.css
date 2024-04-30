@@ -1,6 +1,8 @@
 .starting{
     margin-top: 7vh;
-    border: 1px solid red;
+    border: 1px solid rgb(20, 20, 20);
+    background-color: rgb(243, 243, 243);
+   
 }
 .delivery{
     text-align: center;

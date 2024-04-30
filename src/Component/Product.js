@@ -1,106 +1,99 @@
-import React, { useContext } from 'react'
+ import React,{ useContext }  from 'react'
+import{Filtercontext} from '../contextApi/Filter'
+import{Link} from 'react-router-dom'
+import { click } from '@testing-library/user-event/dist/click';
 import { AppContext } from '../contextApi/Products';
-import Choiseoption from '../Component/Choiseoption';
-import { TbTruckDelivery } from "react-icons/tb";
-import { TbReplace } from "react-icons/tb";
-import '../CSS/Product.css'
-import { useState } from 'react';
-import { MdOutlineSecurity } from "react-icons/md";
-
- function Product() {
-  const harsh = useContext(AppContext);
-  const {setnum,num} = harsh.statemanagement;
-  const[color,setColor] = useState([]);
-  const[count,setCount] = useState(0);
-  
-  const {singleproduct} = harsh.statemanagement;
-  // console.log(singleproduct);
-  
-  function colorhandle(){
-    setColor(color);
-    console.log(color);
-  }
-  function changenumber(){
-    setnum(num+1);
-  }
-  
+export default function Product() {
+  const gauri = useContext(Filtercontext);
+  const {filterdata,values,updatefunction,updatehogya,all,mobilefunction,watchfunction,Accessoriesfunction,Computerfunction,Laptopfunction,samsungfunction,aplefunction,lenovafunction,asusfunction} = gauri.statement;
+  const rajan = useContext(AppContext)
+  const{setId} = rajan.statemanagement;
+  function ClickHandler(id) {
+    setId(id);
+}
   return (
     <div>
       <div>
-        {
-          <div className="container">
-            <div className="row">
-             
-              <div className="col-md-5 abhayimg">
-              {singleproduct.image.map((img, index) => (
-          <img key={index} src={img.url} alt={`Image ${index + 1}`}  />
-        ))}
+        <div className="container ">
+          <div className="row">
+            <div className="col-md-3 anmol">
+              <input type="text" className='btn-3' value={values} onChange={updatefunction} placeholder='SEARCH'/>
+              <button className='btn-9' onClick={updatehogya}>Search</button>
+              <hr />
+                <h6 className='heading2 btn-7'>
+               CATEGORY
+                </h6>
+                <button className='btn-2' onClick={all}>
+                  All
+                </button>
+                <br />
+                <button className='btn-2' onClick={mobilefunction}>
+                  Mobile
+                </button>
+                <br />
+                <button className='btn-2' onClick={Laptopfunction}>
+                  Laptop
+                </button>
+                <br />
+                <button className='btn-2' onClick={Computerfunction}>
+                  Computer
+                </button>
+                <br />
+                <button className='btn-2' onClick={Accessoriesfunction}>
+                  Accessories
+                </button>
+                <br />
+                <button className='btn-2' onClick={watchfunction}>
+                  Watch
+                </button>
+                <br />
+                <hr />
+                <h6 className='heading2  btn-7'>
+                  BRAND
+                </h6>
+                <button className='btn-2' onClick={samsungfunction}>Samsung</button>
+                <br />
+                <button className='btn-2' onClick={aplefunction}>Apple</button>
+                <br />
+                <button className='btn-2' onClick={lenovafunction}>Lenova</button>
+                <br />
+                <button className='btn-2' onClick={asusfunction}>Asus</button>
+                <hr />
+                <div className="color btn-4">
+                  <h5 className='btn-1'>Colors</h5>
+                  <button  className="red btn-1"></button>
+                  <button className="green btn-1"></button>
+                  <button className="blue btn-1"></button>
+                  <button className="yellow btn-1"></button>
+                  <button  className="black btn-1"></button>
+                  
+                </div>
               </div>
-              <div className="col-md-6">
-                <h1>{singleproduct.name}</h1>
-                <p>rating:{singleproduct.reviews} custom review</p>
-                <h5>RS:{singleproduct.price}</h5>
-                <del>
-                  RS:{singleproduct.price + 8000}
-                </del>
-                <p>{singleproduct.description}</p>
-
-                <div className="iconabhay">
-                <span className='icon'>Fast delivery:<TbTruckDelivery />
-                </span><span className='icon'>Replacement:<TbReplace /></span><span className='icon'>Abhay delivery:
-                <TbTruckDelivery />
-                </span><span className='icon'> 2 year warranty:
-                <MdOutlineSecurity />
-                </span>
-                </div>
-                <div className="available">
-                  <h6>
-                    Available options:
-                     {
-                      singleproduct.stock>0 ? <span> Stock</span>:<h6>shsgg</h6>
-                     }
-                  </h6>
-                  <h6>Product Id:{singleproduct.id}</h6>
-                  <h6>Brand:{singleproduct.company}</h6>
-
-                </div>
-
-                <div className="color">
-                {
-                  singleproduct.colors.map ((color,index)=>{
-                    return(
-                      <div onClick={colorhandle} key={index} style={{backgroundColor:color}} className="color-box">
-                      {color[0]}
-                      {color[1]} 
-                      </div>
-                    )
-                  })
-                  
-                }
-                <div className="count">
-                  
-                  <button onClick={()=>setCount(count+1)}>+</button>
-                  {count}
-                  <button onClick={()=>setCount(count-1)}>-</button>
-                </div>
-                <div className="addtocart">
-                  <button onClick={changenumber}>Add To Cart</button>
-                </div>
-                </div>
-                
-
-
+              <div className="col-md-9 flexdd">
               
                 
-                
-
-              </div>
+              
+                { 
+                  filterdata.map((item,index) => (
+                    <div onClick={()=>ClickHandler(item.id)} key={item.id}>
+                    <div key={index}> 
+                      <h6 className='heading2'>
+                        <Link to="/harsh">
+                       <img className='imgproduct' src={item.image} alt="" />
+                       </Link>
+                        <div className='span'>
+                        <span className='tittle'>{item.company}</span><br /><span>RS:{item.price}</span><br /><span>{item.category}</span></div> <hr />
+                      </h6>
+                      <ul>
+                      </ul>
+                    </div>
+                    </div>
+                  ))
+                }
+                </div>
             </div>
           </div>
-        }
+        </div>
       </div>
-
-    </div>
   )
 }
-export default Product;

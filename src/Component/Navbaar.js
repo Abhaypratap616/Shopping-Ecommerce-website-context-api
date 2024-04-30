@@ -5,10 +5,11 @@ import { BsCartCheckFill } from "react-icons/bs";
 import '../CSS/Navbaar.css'
 import { AppContext } from '../contextApi/Products';
 import { useContext } from 'react';
-
+import { anmol } from '../contextApi/Products';
 export default function Navbaar() {
-  const anmolab = useContext(AppContext);
-  const {num} = anmolab.statemanagement;
+  const anmol = useContext(AppContext);
+  const {num} = anmol.statemanagement;
+
   return (
     <div>
       <div>
@@ -35,8 +36,7 @@ export default function Navbaar() {
       </ul>
     <div className='navbar-nav  '>
         <Link className="nav-link text-dark words-dark color logout-function log " to="log">Log Out</Link>
-        <Link className="nav-link" to="cart"><BsCartCheckFill/><span className='number'>{num}</span>
-        
+        <Link className="nav-link" to="cart"><BsCartCheckFill/><span className='number'>{num}</span>    
 </Link>
         </div>
     </div>

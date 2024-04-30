@@ -1,10 +1,147 @@
 .abhayimg img{
-width: 300px;
-height: 300px;
+width: 200px;
+height: 150px;
 margin: 10px;
+justify-content: center;
+display: block;
+margin-left: 50px;
 }
 .icon{
 margin: 17px;
 margin-left: 0px;
 margin-top: 10px;
 }
+.mainphoto img{
+    height: 35vh;
+   margin-top: 20vh;
+}
+.color-box{
+    width: 10px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 4px;
+}
+.button-border{
+    border: none;
+    background-color: white;
+   
+    
+}
+.addtocart{
+    margin-top: 10px;
+}
+.imgproduct{
+    width: 200px ;
+    height: 120px;
+    box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.9);
+}
+.imgproduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+
+
+   
+}
+.red{
+    background-color: red;
+    height: 15px;
+    width: 5px;
+    border-radius: 100%;
+    margin: 5px;
+}
+.green{
+    background-color: rgb(0, 255, 98);
+    height: 15px;
+    width: 5px;
+    border-radius: 100%;
+    margin: 5px;
+}
+.blue{
+    background-color: rgb(0, 85, 255);
+    height: 15px;
+    width: 5px;
+    border-radius: 100%;
+    margin: 5px;
+}
+.yellow{
+    background-color: rgb(218, 255, 50);
+    height: 15px;
+    width: 5px;
+    border-radius: 100%;
+    margin: 5px;
+}
+.black{
+    background-color: rgb(0, 0, 0);
+    height: 15px;
+    width: 5px;
+    border-radius: 100%;
+    margin: 5px;
+}
+.flexdd{
+   display: ruby;
+  
+}
+.span{
+    text-align: center;
+
+}
+.btn-3{
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+    background-color: white;
+  
+}
+.btn-9{
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+    background-color: white;
+    margin: 10px;
+  
+}
+
+.btn-2{
+    margin-top: 19.8px;
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+    background-color: white;
+    
+}
+.btn-2:hover{
+    background-color: rgb(228, 210, 245);
+}
+.btn-8{
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+    background-color: white;
+    
+}
+@media screen and (max-width: 768px){
+    .btn-2{
+       margin-left: 33vw;
+       border-radius: 5px;
+       border: 2px solid blueviolet;
+       background-color: white;
+       
+    }
+    .btn-3{
+        margin-left: 18vw;
+    }
+    .btn-4{
+        margin-left: 32vw;
+    }
+    .btn-7{
+        margin-left: 33vw;
+    }
+    
+}
+    
+
+   
+    
+
+    
+    
+

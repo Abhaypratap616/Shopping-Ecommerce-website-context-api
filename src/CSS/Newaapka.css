@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px){
+    .abhayimg img{
+  margin-left: 76px;
+  margin-top: 30px;
+ 
+    }
+    
+}
+.addtocart button{
+border-radius: 8px;
+background-color: white;
+border: 2px solid blueviolet;
+color: blueviolet;
+}
+.addtocart button:hover{
+    background-color: rgb(196, 167, 224)
+    ;
+    color: blue;
+}

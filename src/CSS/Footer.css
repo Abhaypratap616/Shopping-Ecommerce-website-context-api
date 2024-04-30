@@ -1,20 +1,49 @@
 .btn-6 button{
-    margin-left: 10vw;
+    margin-left: 5vw;
    margin-top: 5px;
 }
 .button{
-    border: 1px solid red;
+    border: 1px solid rgb(73, 70, 70);
     margin-top: 4vh;
+    background-color: rgb(243, 243, 243);
+    
 }
 .last{
     margin-top: 8vh;
     text-align: center;
-    border: 1px solid rgb(227, 12, 12);
+    border: 1px solid rgb(15, 14, 14);
+    background-color: rgb(243, 243, 243);
 }
 .oklast{
     
     text-align: center;
     margin-top: 10px;
-    border: 1px solid rgb(227, 12, 12);
+    border: 1px solid rgb(21, 20, 20);
+    background-color: rgb(243, 243, 243);
 
+}
+@media screen and (max-width: 768px){
+    .button{
+       text-align: center;
+        
+    }
+    .text{
+        text-align: center;
+margin-left: 33px;
+       
+       
+    }
+   
+    
+}
+.abhaypratap{
+    border-radius: 5px;
+   background-color: white;
+   border: 2px solid rgb(136, 30, 212);
+   
+
+    
+}
+.abhaypratap:hover{
+   background-color: rgb(203, 174, 231);
 }

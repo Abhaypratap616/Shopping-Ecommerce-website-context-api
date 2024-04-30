@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import AppContextprovider from './contextApi/Products';
+import Filterprovider from './contextApi/Filter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
    <AppContextprovider>
-    <App />
+    <Filterprovider>
+      <App />
+    </Filterprovider>
     </AppContextprovider>
     </BrowserRouter>
 );

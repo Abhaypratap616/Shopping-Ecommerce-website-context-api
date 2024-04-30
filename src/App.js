@@ -8,6 +8,9 @@ import Contact from './Component/Contact'
 import Login from './Component/Login'
 import Addtocart from './Component/Addtocart'
 import Footer from './Component/Footer'
+import Newaapka from './Component/Newaapka'
+import Newproduct from './Component/Newproduct'
+
 export default function App() {
   return (
     <div>
@@ -22,6 +25,9 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="log" element={<Login />} />
           <Route path="cart" element={<Addtocart/>} />
+          <Route path="harsh" element={<Newaapka/>} />
+          < Route path="yash" element={<Newproduct />} />
+         
         </Routes>
       </div>
       <div>

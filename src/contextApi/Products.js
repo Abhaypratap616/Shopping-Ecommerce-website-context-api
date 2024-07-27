@@ -1,6 +1,9 @@
 import { createContext, useEffect } from "react";
 import { useState } from "react";
+import Home from "../Component/Home";
 const API = 'https://api.pujakaitem.com/api/products';
+
+
 
 export const AppContext = createContext();
 export default function AppContextprovider({children}) {
@@ -14,6 +17,7 @@ export default function AppContextprovider({children}) {
     const [count, setCount] = useState(1);
     const [newdata, setnewdata] = useState([]);
     const[lasttotal,setlasttotal] = useState(0);
+
 
     async function fetchData() {
         setLoading(true);
@@ -32,6 +36,7 @@ export default function AppContextprovider({children}) {
     useEffect(() => {
         fetchData();
     },[
+    
     ]);
     async function single(Id) {
         setLoading(true);

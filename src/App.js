@@ -26,7 +26,7 @@ export default function App() {
           <Route path="log" element={<Login />} />
           <Route path="cart" element={<Addtocart/>} />
           <Route path="harsh" element={<Newaapka/>} />
-          < Route path="yash" element={<Newproduct />} />
+          <Route path="yash" element={<Newproduct />} />
          
         </Routes>
       </div>
